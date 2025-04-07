@@ -10,6 +10,7 @@ import React, {
 import { motion } from "motion/react";
 import {
   Clock,
+  Figma,
   Image,
   Search,
   Send,
@@ -223,8 +224,8 @@ export function HeroSection({
         </div>
       </section>
 
-      <section className="container min-h-screen flex flex-col items-center justify-center py-12 z-10">
-        <div className="w-full max-w-3xl mx-auto relative animate-slideUp mb-16">
+      <section className="min-h-screen w-full flex flex-col items-center justify-center py-12 z-10 bg-black/40 backdrop-blur-md bg-fixed py-12">
+        {/* <div className="w-full max-w-3xl mx-auto relative animate-slideUp mb-16">
           <form onSubmit={handleSubmit} className="relative">
             <Input
               className="w-full py-6 px-4 text-base rounded-lg border border-border/50 bg-background/80 backdrop-blur-sm focus-visible:ring-green-500 "
@@ -267,6 +268,197 @@ export function HeroSection({
             <Button variant="outline" size="sm" className="gap-1">
               <Upload className="h-4 w-4" />
               Upload
+            </Button>
+          </div>
+        </div> */}
+
+        <div className="w-full max-w-3xl mx-auto relative animate-slideUp mb-16">
+          <form onSubmit={handleSubmit} className="relative">
+            <Input
+              className="w-full py-6 px-4 text-base rounded-lg border border-border/50 bg-background/80 backdrop-blur-sm focus-visible:ring-green-500"
+              placeholder="Message Lumin or @mention agent"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+            />
+            <Button
+              type="submit"
+              size="icon"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-green-500 hover:bg-green-600 text-white rounded-full disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={!inputValue.trim()}
+              aria-label="Send message"
+            >
+              <Send />
+            </Button>
+          </form>
+
+          <div className="flex flex-wrap gap-2 mt-4 justify-center">
+            <Button variant="outline" size="sm" className="gap-1">
+              <Search className="h-4 w-4" />
+              Web Search
+            </Button>
+            <Button variant="outline" size="sm" className="gap-1">
+              <Smartphone className="h-4 w-4" />
+              App Builder
+            </Button>
+            <Button variant="outline" size="sm" className="gap-1">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <path
+                  d="M12 7V12L15 15"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+              Deep Research
+            </Button>
+            <Button variant="outline" size="sm" className="gap-1">
+              <Zap className="h-4 w-4" />
+              Think
+            </Button>
+            <Button variant="outline" size="sm" className="gap-1">
+              <Image className="h-4 w-4" />
+              Image Gen
+            </Button>
+            <Button variant="outline" size="sm" className="gap-1">
+              <Upload className="h-4 w-4" />
+              Upload
+            </Button>
+            <Button variant="outline" size="sm" className="gap-1">
+              <Figma className="h-4 w-4" />
+              Figma
+            </Button>
+          </div>
+
+          <div className="mt-6 text-center text-sm text-muted-foreground">
+            <p>
+              +1M early access users & Fortune 100 companies awaiting LUMIN. #1
+              on AI Benchmark. Top AI Company by ARTz.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-6">
+            <Button
+              variant="outline"
+              size="sm"
+              className="justify-start gap-2 h-auto py-2"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-blue-500"
+              >
+                <path
+                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <path
+                  d="M7.5 12.5L10.5 15.5L16.5 9.5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              Lumin-Ultra
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              className="justify-start gap-2 h-auto py-2"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-purple-500"
+              >
+                <path
+                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <path
+                  d="M7.5 12.5L10.5 15.5L16.5 9.5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              Lumin-Pro
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              className="justify-start gap-2 h-auto py-2"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-yellow-500"
+              >
+                <path
+                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <path
+                  d="M7.5 12.5L10.5 15.5L16.5 9.5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              Lumin-Hyper
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              className="justify-start gap-2 h-auto py-2"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-green-500"
+              >
+                <path
+                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <path
+                  d="M7.5 12.5L10.5 15.5L16.5 9.5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              Lumin-Adapt
             </Button>
           </div>
         </div>

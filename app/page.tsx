@@ -26,7 +26,7 @@ export default function Home() {
       <HeroSection setShowCountdown={setShowCountdown} />
 
       {/* Integrated Roadmap Section */}
-      <div className="w-full max-w-5xl mx-auto mb-20 z-10">
+      <div className="w-full max-w-5xl mx-auto mb-20 z-10 my-12">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-green-400 to-emerald-600 bg-clip-text text-transparent inline-flex items-center gap-2">
             Development Roadmap

@@ -1,23 +1,18 @@
 "use client";
-
-import { Menu } from "lucide-react";
-import { ModelSelector } from "./model-selector";
-// import { ThemeToggle } from "./theme-toggle";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <header className="w-full border-b border-border/40 bg-background/80 backdrop-blur-sm fixed z-50 top-0">
       <div className="container flex h-14 items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" className="md:hidden">
-            <Menu className="h-5 w-5" />
-            <span className="sr-only">Toggle menu</span>
-          </Button>
-          <div className="hidden md:flex items-center gap-2">
-            <ModelSelector />
-          </div>
-        </div>
+        <Link className="flex items-center gap-2 w-12 h-12" href="/">
+          <img
+            src="https://pbs.twimg.com/profile_images/1906672357562867712/grtvFoSG_400x400.jpg"
+            alt="lumin"
+            className="w-full h-full object-cover"
+          />
+        </Link>
 
         <div className="flex items-center gap-2">
           {/* <Button variant="outline" size="sm" className="hidden md:flex">
