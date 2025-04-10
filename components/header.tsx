@@ -1,74 +1,43 @@
 "use client";
-
-import { Menu } from "lucide-react";
-import { ModelSelector } from "./model-selector";
-// import { ThemeToggle } from "./theme-toggle";
+import { FaXTwitter } from "react-icons/fa6";
 import { Button } from "./ui/button";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
     <header className="w-full border-b border-border/40 bg-background/80 backdrop-blur-sm fixed z-50 top-0">
       <div className="container flex h-14 items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" className="md:hidden">
-            <Menu className="h-5 w-5" />
-            <span className="sr-only">Toggle menu</span>
-          </Button>
-          <div className="hidden md:flex items-center gap-2">
-            <ModelSelector />
-          </div>
-        </div>
+        <Link className="flex items-center gap-2 w-12 h-12" href="/">
+          <img
+            src="/logo.png"
+            alt="lumin"
+            className="w-full h-full object-cover"
+          />
+        </Link>
 
         <div className="flex items-center gap-2">
-          {/* <Button variant="outline" size="sm" className="hidden md:flex">
-              App Builder
-            </Button>
-
-            <Button
-              variant="outline"
-              size="sm"
-              className="hidden md:flex gap-1"
-            >
-              <span className="sr-only">VSCode</span>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16.5 3.75V20.25L4.5 16.5V7.5L16.5 3.75Z"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M16.5 3.75L20.25 2.25V18.75L16.5 20.25"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M16.5 9L4.5 12"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M10.5 9.75L4.5 12"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              VSCode
-            </Button> */}
-
+          <Link
+            href="https://dexscreener.com/sol/luminoracle"
+            target="_blank"
+            className="p-2 hover:bg-gray-300 transition-colors duration-300 flex items-center justify-center group w-10 h-10"
+          >
+            <Image
+              width={150}
+              height={150}
+              src="https://www.seekeroracle.com/dexscreener_logo.svg"
+              alt="dexscreener"
+              className="w-full h-full object-cover group-hover:invert transition-colors duration-300"
+            />
+            {/* <Dex size={20} /> */}
+          </Link>
+          <Link
+            href="https://x.com/luminoracle"
+            target="_blank"
+            className="p-2 text-white hover:text-black hover:bg-gray-300 transition-colors duration-300"
+          >
+            <FaXTwitter size={20} />
+          </Link>
           <Button variant="outline" size="sm">
             Email Login
           </Button>

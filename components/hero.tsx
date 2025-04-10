@@ -10,6 +10,7 @@ import React, {
 import { motion } from "motion/react";
 import {
   Clock,
+  Figma,
   Image,
   Search,
   Send,
@@ -21,6 +22,7 @@ import {
 import { Terminal } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import Link from "next/link";
 
 export function HeroSection({
   setShowCountdown,
@@ -88,6 +90,10 @@ export function HeroSection({
       <section
         className="relative min-h-screen flex items-center pt-20 select-none"
         id="hero"
+        style={{
+          scrollSnapAlign: "start",
+          scrollSnapStop: "always",
+        }}
       >
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -132,7 +138,7 @@ export function HeroSection({
                   <div className="flex items-center gap-3 mb-4 border-b border-green-900/50 pb-4">
                     <Terminal size={20} className="text-green-400" />
                     <p className="text-green-400 font-mono text-sm">
-                      LUMIN INTERFACE
+                      LUMIN TERMINAL
                     </p>
                   </div>
 
@@ -223,11 +229,87 @@ export function HeroSection({
         </div>
       </section>
 
-      <section className="container min-h-screen flex flex-col items-center justify-center py-12 z-10">
-        <div className="w-full max-w-3xl mx-auto relative animate-slideUp mb-16">
+      <section
+        className="min-h-screen w-full flex flex-col items-center justify-center py-12 z-10 relative"
+        style={{
+          scrollSnapAlign: "start",
+          scrollSnapStop: "always",
+        }}
+      >
+        <svg
+          width="100%"
+          height="40"
+          viewBox="0 0 100 20"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="absolute -bottom-4 left-0 right-0"
+        >
+          <defs>
+            <linearGradient
+              id="electricGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop offset="0%" stopColor="#34d399" />
+              <stop offset="50%" stopColor="#0a683f" />
+              <stop offset="100%" stopColor="#014729" />
+            </linearGradient>
+          </defs>
+          <polyline
+            points="
+    0,10
+    2.5,4
+    5,10
+    7.5,2
+    10,10
+    12.5,6
+    15,10
+    17.5,3
+    20,10
+    22.5,7
+    25,10
+    27.5,5
+    30,10
+    32.5,2
+    35,10
+    37.5,8
+    40,10
+    42.5,4
+    45,10
+    47.5,6
+    50,10
+    52.5,5
+    55,10
+    57.5,3
+    60,10
+    62.5,7
+    65,10
+    67.5,4
+    70,10
+    72.5,2
+    75,10
+    77.5,8
+    80,10
+    82.5,6
+    85,10
+    87.5,3
+    90,10
+    92.5,5
+    95,10
+    97.5,7
+    100,10"
+            stroke="url(#electricGradient)"
+            fill="transparent"
+            strokeWidth="1"
+          />
+        </svg>
+
+        <div className="w-full max-w-5xl mx-auto relative animate-slideUp mb-16">
           <form onSubmit={handleSubmit} className="relative">
             <Input
-              className="w-full py-6 px-4 text-base rounded-lg border border-border/50 bg-background/80 backdrop-blur-sm focus-visible:ring-green-500 "
+              className="w-full py-8 px-6 text-base rounded-lg border border-border/50 bg-background/80 backdrop-blur-sm focus-visible:ring-green-500"
               placeholder="Message Lumin or @mention agent"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
@@ -235,9 +317,9 @@ export function HeroSection({
             <Button
               type="submit"
               size="icon"
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-green-500 disabled:cursor-not-allowed disabled:bg-green-500/30 hover:bg-green-600 text-white rounded-full"
-              aria-label="Send message"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-green-500 hover:bg-green-600 text-white rounded-full disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={!inputValue.trim()}
+              aria-label="Send message"
             >
               <Send />
             </Button>
@@ -253,21 +335,78 @@ export function HeroSection({
               App Builder
             </Button>
             <Button variant="outline" size="sm" className="gap-1">
-              <Clock className="h-4 w-4" />
+              <Clock size={20} />
               Deep Research
             </Button>
             <Button variant="outline" size="sm" className="gap-1">
               <Zap className="h-4 w-4" />
               Think
             </Button>
+
             <Button variant="outline" size="sm" className="gap-1">
               <Image className="h-4 w-4" />
               Image Gen
             </Button>
+
             <Button variant="outline" size="sm" className="gap-1">
               <Upload className="h-4 w-4" />
               Upload
             </Button>
+
+            <Button variant="outline" size="sm" className="gap-1">
+              <Figma className="h-4 w-4" />
+              Figma
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mt-6">
+            <Button
+              variant="outline"
+              size="sm"
+              className="justify-start gap-2 h-auto py-2"
+            >
+              <Clock size={20} className="text-blue-500" />
+              Lumin-Ultra
+            </Button>
+
+            <Button
+              variant="outline"
+              size="sm"
+              className="justify-start gap-2 h-auto py-2"
+            >
+              <Clock size={20} className="text-purple-500" />
+              Lumin-Pro
+            </Button>
+
+            <Button
+              variant="outline"
+              size="sm"
+              className="justify-start gap-2 h-auto py-2"
+            >
+              <Clock size={20} className="text-yellow-500" />
+              Lumin-Hyper
+            </Button>
+
+            <Button
+              variant="outline"
+              size="sm"
+              className="justify-start gap-2 h-auto py-2"
+            >
+              <Clock size={20} className="text-green-500" />
+              Lumin-Adapt
+            </Button>
+          </div>
+          <div className="mt-6 text-center text-sm text-muted-foreground">
+            <p>
+              The first 1,000 holders receive 6 months of free access to our
+              most advanced model.
+            </p>
+            <Link
+              href="https://forms.gle/4zPX2XKZktcntBVVA"
+              className="mt-4 inline-block px-6 py-3 rounded-md bg-green-500 hover:bg-green-400 text-sm font-medium transition-colors duration-300 text-black"
+            >
+              Join the waitlist
+            </Link>
           </div>
         </div>
       </section>
