@@ -113,7 +113,11 @@
     position: absolute;
     inset: 0;
     border-radius: 0.375rem;
-    background: linear-gradient(to right, rgba(52, 211, 153, 0.2), rgba(16, 185, 129, 0.2));
+    background: linear-gradient(
+      to right,
+      rgba(52, 211, 153, 0.2),
+      rgba(16, 185, 129, 0.2)
+    );
     opacity: 0;
     animation: pulse 2s infinite;
   }
@@ -160,7 +164,11 @@
   position: absolute;
   inset: -4px;
   border-radius: 50%;
-  background: linear-gradient(45deg, rgba(52, 211, 153, 0.2), rgba(16, 185, 129, 0.1));
+  background: linear-gradient(
+    45deg,
+    rgba(52, 211, 153, 0.2),
+    rgba(16, 185, 129, 0.1)
+  );
   animation: rotate 10s linear infinite;
 }
 
@@ -186,7 +194,12 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(52, 211, 153, 0.1), transparent);
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(52, 211, 153, 0.1),
+    transparent
+  );
   transform: rotate(45deg);
   transition: transform 0.6s;
 }
@@ -194,4 +207,3 @@
 .btn-futuristic:hover::after {
   transform: rotate(45deg) translate(50%, 50%);
 }
-

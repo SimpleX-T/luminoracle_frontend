@@ -14,7 +14,7 @@ export function Roadmap({ onClose }: RoadmapProps) {
   const roadmapPhases = [
     {
       title: "Phase 1: Foundation",
-      date: "Q2 2025",
+      date: "Q1 2025",
       description:
         "Initial release of Lumin with hyper-adaptive reasoning capabilities and basic omni-task functionality.",
       features: [
@@ -26,7 +26,7 @@ export function Roadmap({ onClose }: RoadmapProps) {
     },
     {
       title: "Phase 2: Evolution",
-      date: "Q4 2025",
+      date: "Q2 2025",
       description:
         "Enhanced self-evolution capabilities and expanded knowledge integration systems.",
       features: [
@@ -38,7 +38,7 @@ export function Roadmap({ onClose }: RoadmapProps) {
     },
     {
       title: "Phase 3: Mastery",
-      date: "Q2 2026",
+      date: "Q3 2026",
       description:
         "Full omni-task mastery across all domains with unprecedented utility.",
       features: [
@@ -63,17 +63,15 @@ export function Roadmap({ onClose }: RoadmapProps) {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full min-h-[50vh] max-w-7xl mx-auto">
       {/* Futuristic Timeline */}
       <div className="relative mb-16">
-        {/* <div className="absolute left-0 top-1/2 w-full h-0.5 bg-gradient-to-r from-green-500/20 via-green-400/40 to-green-500/20 transform -translate-y-1/2"></div> */}
-
         <div className="flex justify-between relative z-10 mb-4">
           {roadmapPhases.map((phase, index) => (
             <div
               key={index}
               className={`relative flex flex-col items-center cursor-pointer group transition-all duration-300 ${
-                activePhase === index
+                activePhase >= index
                   ? "scale-110"
                   : "opacity-70 hover:opacity-100"
               }`}
@@ -83,31 +81,31 @@ export function Roadmap({ onClose }: RoadmapProps) {
             >
               <div
                 className={`w-16 h-16 rounded-full flex items-center justify-center z-10 transition-all duration-300 border-2 ${
-                  activePhase === index
+                  activePhase >= index
                     ? "border-green-500 bg-green-500/20"
                     : "border-green-500/40 bg-background"
                 }`}
               >
                 <div
                   className={`w-8 h-8 rounded-full transition-all duration-300 ${
-                    activePhase === index ? "bg-green-500" : "bg-green-500/40"
+                    activePhase >= index ? "bg-green-500" : "bg-green-500/40"
                   }`}
                 ></div>
-                {(activePhase === index || hoveredPhase === index) && (
+                {(activePhase >= index || hoveredPhase === index) && (
                   <div className="absolute -inset-2 rounded-full bg-green-500/10 animate-pulse"></div>
                 )}
               </div>
 
               <div
                 className={`absolute top-16 text-center transition-all duration-300 ${
-                  activePhase === index
+                  activePhase >= index
                     ? "opacity-100"
                     : "opacity-70 group-hover:opacity-100"
                 }`}
               >
                 <p
                   className={`font-bold ${
-                    activePhase === index
+                    activePhase >= index
                       ? "text-green-500"
                       : "text-muted-foreground"
                   }`}
@@ -119,7 +117,7 @@ export function Roadmap({ onClose }: RoadmapProps) {
               {/* Vertical line connecting to content */}
               <div
                 className={`absolute h-12 w-0.5 top-16 bg-gradient-to-b from-green-500/80 to-green-500/0 ${
-                  activePhase === index ? "opacity-100" : "opacity-40"
+                  activePhase >= index ? "opacity-100" : "opacity-40"
                 }`}
               ></div>
             </div>
