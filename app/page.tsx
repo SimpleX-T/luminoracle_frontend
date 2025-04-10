@@ -34,14 +34,8 @@ export default function Home() {
 
       <HeroSection setShowCountdown={setShowCountdown} />
 
-      <div
-        className="w-full mb-20 z-10 pt-32 min-h-screen flex items-center justify-center"
-        style={{
-          scrollSnapAlign: "start",
-          scrollSnapStop: "always",
-        }}
-      >
-        <div className="w-full">
+      <div className="w-full mb-20 z-10 pt-32 min-h-screen flex items-center justify-center snap-start snap-always px-2 md:px-0">
+        <div className="w-full mt-12 md:mt-0">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-green-400 to-emerald-600 bg-clip-text text-transparent inline-flex items-center gap-2">
               Development Roadmap

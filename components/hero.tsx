@@ -12,6 +12,7 @@ import {
   Clock,
   Figma,
   Image,
+  Lock,
   Search,
   Send,
   Smartphone,
@@ -88,14 +89,10 @@ export function HeroSection({
   return (
     <React.Fragment>
       <section
-        className="relative min-h-screen flex items-center pt-20 select-none"
+        className="relative min-h-screen h-screen w-full flex items-center pt-20 select-none mb-20 snap-start snap-always"
         id="hero"
-        style={{
-          scrollSnapAlign: "start",
-          scrollSnapStop: "always",
-        }}
       >
-        <div className="container mx-auto px-4 py-20 relative z-10">
+        <div className="container mx-auto px-4 py-20 relative z-10 mt-48 md:mt-0">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div
               className={`space-y-8 transition-all duration-1000 ${
@@ -110,7 +107,7 @@ export function HeroSection({
                 </p>
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="block">The Future of</span>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-600">
                   Intelligence is Here
@@ -147,14 +144,17 @@ export function HeroSection({
                       <input
                         ref={promptRef}
                         type="text"
-                        className="w-full px-4 py-3 bg-black/60 border border-green-500/30 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500/50 text-white placeholder-gray-500 pr-32 select-none"
+                        className="w-full px-4 py-3 bg-black/60 border border-green-500/30 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500/50 text-white placeholder-gray-500 pr-12 text-sm md:text-md md:pr-20 select-none"
                         placeholder="Ask Lumin anything..."
                         value={promptText}
                         onChange={(e) => setPromptText(e.target.value)}
                         disabled
                       />
-                      <div className="absolute right-2 top-2 px-3 py-1 bg-black/80 border border-green-500/30 rounded text-xs text-green-400 font-mono">
-                        LOCKED TILL Q4
+                      <div className="absolute right-1 top-1/2 -translate-y-1/2 p-3 bg-black/80 border border-green-500/30 rounded text-xs text-green-400 font-mono">
+                        <Lock size={12} className="md:hidden" />
+                        <span className="hidden md:inline-block">
+                          LOCKED TILL Q4
+                        </span>
                       </div>
                     </div>
 
@@ -183,7 +183,7 @@ export function HeroSection({
                       </div>
                     </div>
 
-                    <div className="pt-4 border-t border-green-900/50">
+                    <div className="pt-4 border-t hidden md:block border-green-900/50">
                       <div className="flex items-center justify-between">
                         <p className="text-green-400 font-mono text-xs">
                           DEVELOPMENT PROGRESS
@@ -229,13 +229,7 @@ export function HeroSection({
         </div>
       </section>
 
-      <section
-        className="min-h-screen w-full flex flex-col items-center justify-center py-12 z-10 relative"
-        style={{
-          scrollSnapAlign: "start",
-          scrollSnapStop: "always",
-        }}
-      >
+      <section className="min-h-screen h-screen w-full flex flex-col items-center justify-center py-12 z-10 relative snap-start snap-always">
         <svg
           width="100%"
           height="40"
@@ -306,10 +300,10 @@ export function HeroSection({
           />
         </svg>
 
-        <div className="w-full max-w-5xl mx-auto relative animate-slideUp mb-16">
+        <div className="w-full max-w-5xl mx-auto relative animate-slideUp mb-16 mt-32 md:mt-0 px-2 md:px-0">
           <form onSubmit={handleSubmit} className="relative">
             <Input
-              className="w-full py-8 px-6 text-base rounded-lg border border-border/50 bg-background/80 backdrop-blur-sm focus-visible:ring-green-500"
+              className="w-full py-6 md:py-8 px-4 md:px-6 text-base rounded-lg border border-border/50 bg-background/80 backdrop-blur-sm focus-visible:ring-green-500"
               placeholder="Message Lumin or @mention agent"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
