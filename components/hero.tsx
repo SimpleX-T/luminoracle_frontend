@@ -92,7 +92,7 @@ export function HeroSection({
         className="relative min-h-screen h-screen w-full flex items-center pt-20 select-none mb-20 snap-start snap-always"
         id="hero"
       >
-        <div className="container mx-auto px-4 py-20 relative z-10 mt-48 md:mt-0">
+        <div className="container mx-auto px-4 py-20 relative z-10 mt-20 md:mt-0">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div
               className={`space-y-8 transition-all duration-1000 ${

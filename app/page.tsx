@@ -19,13 +19,13 @@ export default function Home() {
   return (
     <main
       className="flex min-h-screen flex-col items-center bg-background transition-colors duration-300 relative overflow-x-hidden"
-      style={{
-        scrollSnapType: "y mandatory",
-        overflowY: "scroll",
-        borderWidth: "none",
-        height: "100vh",
-        scrollbarWidth: "none",
-      }}
+      // style={{
+      //   scrollSnapType: "y mandatory",
+      //   overflowY: "scroll",
+      //   borderWidth: "none",
+      //   height: "100vh",
+      //   scrollbarWidth: "none",
+      // }}
     >
       <GridBackground />
       <ParticleBackground />
