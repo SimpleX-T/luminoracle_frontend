@@ -89,10 +89,10 @@ export function HeroSection({
   return (
     <React.Fragment>
       <section
-        className="relative min-h-screen h-screen flex items-center pt-20 select-none mb-20 snap-start snap-always"
+        className="relative min-h-screen h-screen w-full flex items-center pt-20 select-none mb-20 snap-start snap-always"
         id="hero"
       >
-        <div className="container mx-auto px-4 py-20 relative z-10 mt-52 md:mt-0">
+        <div className="container mx-auto px-4 py-20 relative z-10 mt-48 md:mt-0">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div
               className={`space-y-8 transition-all duration-1000 ${
@@ -107,7 +107,7 @@ export function HeroSection({
                 </p>
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="block">The Future of</span>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-600">
                   Intelligence is Here
