@@ -53,7 +53,7 @@ export default function Home() {
         {showCountdown && (
           <CountdownTimer
             onClose={() => setShowCountdown(false)}
-            targetDate="2025-04-25T00:00:00"
+            targetDate="2025-05-05T00:00:00"
           />
         )}
       </section>
