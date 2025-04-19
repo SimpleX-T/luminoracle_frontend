@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import StaticCard from "./static-card";
+import AnimatedCard from "./animated-card";
 
 interface FlipUnitProps {
   digit: number;

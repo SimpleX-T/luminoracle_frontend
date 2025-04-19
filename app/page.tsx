@@ -3,15 +3,14 @@
 import type React from "react";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { CountdownTimer } from "@/components/countdown-timer";
+import { CountdownTimer } from "@/components/countdown";
 import { Roadmap } from "@/components/roadmap";
 import { ParticleBackground } from "@/components/particle-background";
 import { GridBackground } from "@/components/grid-background";
 import Header from "@/components/header";
 import { HeroSection } from "@/components/hero";
 import Link from "next/link";
-import { FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Home() {
   const [showCountdown, setShowCountdown] = useState(false);
