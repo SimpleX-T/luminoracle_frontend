@@ -1,4 +1,4 @@
-# 🌟 Lumin Frontend
+# 🌟 Lumin Oracle
 
 > **"AI, Reimagined."**  
 > The official frontend for **Lumin** — a hyper-adaptive, multimodal, self-evolving AI developed to go beyond the boundaries of traditional intelligence.
@@ -66,11 +66,15 @@ This repository contains the **frontend application** for Lumin.
 
 - **Framework:** React / Next.js *(or your actual stack)*
 - **UI:** TailwindCSS / Styled Components *(or your actual stack)*
-- **State Management:** Redux / Zustand / Context API *(if applicable)*
-- **API Integration:** GraphQL / REST / WebSockets
-- **Deployment:** Vercel / Netlify / Docker / Other
 
 > 📌 Note: Backend, model logic, and AI core are maintained in separate repositories.
+
+---
+
+## 🌐 Connect With Us
+
+- 🌍 Website: [https://luminoracle.com](https://luminoracle.com)  
+- 🐦 Twitter/X: [@luminOracle](https://x.com/luminoracle)
 
 ---
 
