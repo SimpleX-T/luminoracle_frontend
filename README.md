@@ -1,93 +1,93 @@
 # 🌟 Lumin Oracle
 
 > **"AI, Reimagined."**  
-> The official frontend for **Lumin**, a hyper-adaptive, multimodal, self-evolving AI that pushes beyond traditional intelligence.
+> The official frontend for **Lumin** — a hyper-adaptive, multimodal, self-evolving AI developed to go beyond the boundaries of traditional intelligence.
 
 ---
 
 ## 🚀 Introduction
 
-AI is evolving fast. Tools like **Grok 3** by xAI have moved the needle — but there's still untapped potential.
+The rapid evolution of artificial intelligence has introduced groundbreaking tools like **Grok 3** by xAI. But the ceiling of AI utility remains untapped.
 
-Meet **Lumin**: named for its ability to illuminate new possibilities. It’s not just reactive, it’s *proactive*. Not just single-modal, it’s *multimodal*. Not just pre-trained, it *evolves*.
+Enter **Lumin**: named for its ability to illuminate unseen possibilities, it redefines what AI can be not just reactive, but *proactive*. Not just single-modal, but *multimodal*. Not just pre-trained, but *self-evolving*.
 
-Lumin is more than an assistant. It’s a true partner, capable of **adaptive reasoning**, **task versatility**, and **self-improvement**.
+Lumin is built from the ground up to be more than an assistant. It is a partner one capable of **hyper-adaptive reasoning**, **omni-task mastery**, and **autonomous evolution**.
 
-This is the official frontend — your gateway to next-gen AI.
-
----
-
-## ✨ Key Features
-
-### ⚡ Hyper-Adaptive Reasoning
-
-- **What it does:**  
-  Adapts its reasoning style — logical, emotional, or creative — based on your context and intent.
-
-- **Why it stands out:**  
-  Explains quantum theory through poetry or technical diagrams depending on who you are.
-
-- **Why it matters:**  
-  Interactions feel natural, impactful, and personalized.
+This repository contains the **frontend interface** for Lumin, serving as the user’s gateway into a new era of AI interaction.
 
 ---
 
-### 🌐 Omni-Task Mastery
+## ✨ Core Features
 
-- **What it does:**  
-  Handles text, image, audio, video, code, and simulations — all from one interface.
+### 1. ⚡ Hyper-Adaptive Reasoning
 
-- **Why it stands out:**  
-  From composing music to optimizing energy systems, it does it all in one session.
+- **What It Is:**  
+  Lumin tailors its reasoning style logical, emotional, creative in real-time to suit the user’s context and intent.
+  
+- **What Makes It Unique:**  
+  It might explain quantum theory using metaphors for a poet, or complex formulas for an engineer seamlessly.
 
-- **Why it matters:**  
-  Replaces the need for multiple tools. One AI. Any task.
+- **Why It Matters:**  
+  Every interaction is intuitive and impactful, bridging human-AI communication gaps with ease.
 
 ---
 
-### 🔁 Self-Evolution
+### 2. 🌐 Omni-Task Mastery
 
-- **What it does:**  
-  Updates its own algorithms, learns new skills, and improves performance autonomously.
+- **What It Is:**  
+  Lumin handles tasks across text, image, audio, video, code, and physical simulation all from a single unified interface.
 
-- **Why it stands out:**  
-  Unlike static models, Lumin evolves continuously.
+- **What Makes It Unique:**  
+  It can compose a symphony, design a skyscraper, and optimize its energy consumption in one session.
 
-- **Why it matters:**  
-  It stays future-ready and grows with your needs.
+- **Why It Matters:**  
+  Eliminates the need for multiple tools. One AI. Every task. Limitless applications.
+
+---
+
+### 3. 🔁 Self-Evolution
+
+- **What It Is:**  
+  Lumin rewrites its own algorithms, learns new skills, and optimizes its performance all autonomously.
+
+- **What Makes It Unique:**  
+  Unlike static models like Grok 3, Lumin evolves even overnight.
+
+- **Why It Matters:**  
+  Ensures future-proofing and adaptability for challenges yet to come.
 
 ---
 
 ## 🖥️ About This Repo
 
-This is the frontend for Lumin — the interface that brings it all together.
+This repository contains the **frontend application** for Lumin.
 
-### 🛠 Tech Stack
+### 🛠 Built With
 
-- **Framework:** React / Next.js  
+- **Framework:** React / Next.js
 - **UI:** TailwindCSS / Styled Components
 
-> 📌 Backend, model logic, and AI core are maintained in separate repositories.
+> 📌 Note: Backend, model logic, and AI core are maintained in separate repositories.
 
 ---
 
 ## 🌐 Connect With Us
 
-- 🌍 [luminoracle.com](https://luminoracle.com)  
-- 🐦 [@luminoracle](https://x.com/luminoracle)
+- 🌍 Website: [https://luminoracle.com](https://luminoracle.com)  
+- 🐦 Twitter/X: [@luminoracle](https://x.com/luminoracle)
 
 ---
 
 ## 📦 Getting Started
 
-### Requirements
+### Prerequisites
 
-- Node.js (vXX+)
-- npm or yarn
+- Node.js (vXX or higher)
+- npm / yarn
 
-### Setup
+### Installation
 
-```bash
+bash
 git clone https://github.com/your-org/lumin-frontend.git
 cd lumin-frontend
 npm install
